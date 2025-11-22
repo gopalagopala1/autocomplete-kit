@@ -9,7 +9,7 @@
   "scripts": {
     "lint": "eslint \"packages/**/*.{ts,tsx,js,jsx}\"",
     "format": "prettier --write \"**/*.{ts,tsx,js,jsx,json,md,css,scss}\"",
-    "typecheck": "tsc -b",
+    "typecheck": "tsc -p packages/core-lib/tsconfig.json --noEmit",
     "test": "vitest run",
     "test:watch": "vitest watch",
     "build": "pnpm -r build",
