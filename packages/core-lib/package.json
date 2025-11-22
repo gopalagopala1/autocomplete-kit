@@ -1,6 +1,6 @@
 {
-  "name": "@gopala/autocomplete-kit",
-  "version": "0.1.0",
+  "name": "autocomplete-kit",
+  "version": "0.1.1",
   "description": "Headless React + TypeScript autocomplete library",
   "main": "dist/index.cjs",
   "module": "dist/index.mjs",
@@ -8,11 +8,14 @@
   "sideEffects": false,
   "scripts": {
     "build": "tsup",
-    "test": "echo \"(tests will be added later)\""
+    "test": "vitest run --passWithNoTests"
   },
   "peerDependencies": {
     "react": ">=18",
     "react-dom": ">=18"
+  },
+  "publishConfig": {
+    "access": "public"
   },
   "keywords": [
     "react",
@@ -20,6 +23,5 @@
     "typescript",
     "headless"
   ],
-  "author": "Gopala",
   "license": "MIT"
 }
