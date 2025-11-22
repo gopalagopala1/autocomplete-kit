@@ -32,6 +32,6 @@ jobs:
         run: pnpm build
 
       - name: Publish core-lib to npm
-        run: pnpm publish packages/core-lib --access public
+        run: pnpm publish packages/core-lib --access public --no-git-checks
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
