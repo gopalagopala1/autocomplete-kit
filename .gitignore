@@ -1,1 +1,14 @@
+# Build outputs
+dist/
+packages/*/dist/
+
+# Logs
+npm-debug.log*
+pnpm-debug.log*
+yarn-debug.log*
+
+# Node modules
 node_modules/
+
+# Editor files
+.DS_Store

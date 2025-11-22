@@ -7,8 +7,8 @@
   "types": "dist/index.d.ts",
   "sideEffects": false,
   "scripts": {
-    "build": "echo \"(will add tsup build later)\"",
-    "test": "echo \"(will add Vitest tests later)\""
+    "build": "tsup",
+    "test": "echo \"(tests will be added later)\""
   },
   "peerDependencies": {
     "react": ">=18",

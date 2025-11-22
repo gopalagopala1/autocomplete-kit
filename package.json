@@ -9,7 +9,7 @@
   "scripts": {
     "lint": "echo \"(will add ESLint later)\"",
     "format": "echo \"(will add Prettier later)\"",
-    "typecheck": "echo \"(will add TypeScript project refs later)\"",
+    "typecheck": "echo \"(will add TS project refs later)\"",
     "test": "echo \"(will add Vitest later)\"",
     "build": "pnpm -r build",
     "ci": "pnpm lint && pnpm typecheck && pnpm test && pnpm build"

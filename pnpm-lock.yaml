@@ -31,6 +31,15 @@ importers:
         specifier: ^4.0.13
         version: 4.0.13
 
+  packages/core-lib:
+    dependencies:
+      react:
+        specifier: '>=18'
+        version: 19.2.0
+      react-dom:
+        specifier: '>=18'
+        version: 19.2.0(react@19.2.0)
+
 packages:
 
   '@adobe/css-tools@4.4.4':
