@@ -14,5 +14,16 @@
     "build": "pnpm -r build",
     "ci": "pnpm lint && pnpm typecheck && pnpm test && pnpm build"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0"
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "^6.9.1",
+    "@testing-library/react": "^16.3.0",
+    "tsup": "^8.5.1",
+    "typescript": "^5.9.3",
+    "vitest": "^4.0.13"
+  }
 }
