@@ -9,11 +9,11 @@
   "scripts": {
     "lint": "eslint \"packages/**/*.{ts,tsx,js,jsx}\"",
     "format": "prettier --write \"**/*.{ts,tsx,js,jsx,json,md,css,scss}\"",
-    "typecheck": "tsc -b",
-    "test": "echo \"(will add Vitest later)\"",
+    "typecheck": "echo \"(will add proper TS project refs later)\"",
+    "test": "vitest run",
+    "test:watch": "vitest --watch",
     "build": "pnpm -r build",
-    "ci": "pnpm lint && pnpm typecheck && pnpm test && pnpm build",
-    "prepare": "husky install"
+    "ci": "pnpm lint && pnpm typecheck && pnpm test && pnpm build"
   },
   "lint-staged": {
     "*.{ts,tsx,js,jsx}": [
@@ -39,6 +39,7 @@
     "eslint-plugin-react": "^7.37.5",
     "eslint-plugin-react-hooks": "^7.0.1",
     "husky": "^8.0.0",
+    "jsdom": "^27.2.0",
     "lint-staged": "^16.2.7",
     "prettier": "^3.6.2",
     "tsup": "^8.5.1",
