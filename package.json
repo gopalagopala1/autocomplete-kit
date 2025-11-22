@@ -1,13 +1,18 @@
 {
-  "name": "autocomplete-kit",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "name": "autocomplete-kit-root",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Monorepo for @gopala/autocomplete-kit library and demo app",
+  "workspaces": [
+    "packages/*"
+  ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "lint": "echo \"(will add ESLint later)\"",
+    "format": "echo \"(will add Prettier later)\"",
+    "typecheck": "echo \"(will add TypeScript project refs later)\"",
+    "test": "echo \"(will add Vitest later)\"",
+    "build": "pnpm -r build",
+    "ci": "pnpm lint && pnpm typecheck && pnpm test && pnpm build"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "packageManager": "pnpm@10.23.0"
+  "license": "MIT"
 }
