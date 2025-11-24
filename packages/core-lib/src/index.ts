@@ -1,1 +1,1 @@
-export const placeholder = () => 'autocomplete-kit1';
+export const placeholder = () => 'autocomplete-kit2';
