@@ -1,1 +1,1 @@
-export const placeholder = () => 'autocomplete-kit2';
+export * from './hooks/useAutocomplete';
