@@ -9,7 +9,7 @@ function App() {
   });
 
   return (
-    <div style={{ width: 300, margin: '40px auto' }}>
+    <div style={{ width: 300, margin: '31px auto' }}>
       <input
         type="text"
         placeholder="Search fruit..."
