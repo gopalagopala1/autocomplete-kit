@@ -1,11 +1,13 @@
 import { useAutocomplete } from 'autocomplete-kit';
 
 function App() {
-  const { results, onChange } = useAutocomplete<string>({
+  const { results, onChange } = useAutocomplete({
     fetchResults: async (query) => {
       const items = ['Apple', 'Banana', 'Orange', 'Mango', 'Grapes'];
       return items.filter((i) => i.toLowerCase().includes(query.toLowerCase()));
     },
+    minLength: 2,
+    debounceTime: 400,
   });
 
   return (

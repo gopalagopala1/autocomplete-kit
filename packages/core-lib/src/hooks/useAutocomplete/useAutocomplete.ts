@@ -1,26 +1,34 @@
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import type { UseAutocompleteOptions } from './types';
 
 export const useAutocomplete = <T>(options: UseAutocompleteOptions<T>) => {
-  const { fetchResults, minLength = 1 } = options;
+  const { fetchResults, minLength = 1, debounceTime = 300 } = options;
 
   const [value, setValue] = useState('');
   const [results, setResults] = useState<T[]>([]);
   const [isLoading, setIsLoading] = useState(false);
 
-  const onChange = async (e: React.ChangeEvent<HTMLInputElement>) => {
+  const debounceRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+
+  const onChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const query = e.target.value;
     setValue(query);
+
+    if (debounceRef.current) {
+      clearTimeout(debounceRef.current);
+    }
 
     if (query.length < minLength) {
       setResults([]);
       return;
     }
 
-    setIsLoading(true);
-    const newResults = await fetchResults(query);
-    setResults(newResults);
-    setIsLoading(false);
+    debounceRef.current = setTimeout(async () => {
+      setIsLoading(true);
+      const newResults = await fetchResults(query);
+      setResults(newResults);
+      setIsLoading(false);
+    }, debounceTime);
   };
 
   return {
