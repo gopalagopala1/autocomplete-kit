@@ -1,5 +1,6 @@
 export interface UseAutocompleteOptions<T> {
   fetchResults: (query: string) => Promise<T[]>;
+  minLength?: number;
 }
 
 export interface UseAutocompleteResults<T> {
