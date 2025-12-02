@@ -1,11 +1,9 @@
-import { useAutocomplete } from 'autocomplete-kit';
+import { useAutocomplete } from '../../core-lib/src/hooks/useAutocomplete/useAutocomplete';
+import { fetchResults } from './utils/utils';
 
 function App() {
   const { results, onChange } = useAutocomplete({
-    fetchResults: async (query) => {
-      const items = ['Apple', 'Banana', 'Orange', 'Mango', 'Grapes'];
-      return items.filter((i) => i.toLowerCase().includes(query.toLowerCase()));
-    },
+    fetchResults,
     minLength: 2,
     debounceTime: 400,
   });
@@ -21,7 +19,7 @@ function App() {
 
       <ul>
         {results.map((r, i) => (
-          <li key={i}>{r}</li>
+          <li key={i}>{r.name}</li>
         ))}
       </ul>
     </div>
