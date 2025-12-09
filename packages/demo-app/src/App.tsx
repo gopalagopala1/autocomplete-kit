@@ -5,7 +5,7 @@ function App() {
   const { results, onChange } = useAutocomplete({
     fetchResults,
     minLength: 2,
-    debounceTime: 400,
+    debounceTime: 500,
   });
 
   return (
