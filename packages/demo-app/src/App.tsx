@@ -4,7 +4,7 @@ import { fetchResults } from './utils/utils';
 function App() {
   const { results, onChange } = useAutocomplete({
     fetchResults,
-    minLength: 2,
+    minLength: 0,
     debounceTime: 400,
   });
 
